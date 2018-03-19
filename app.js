@@ -3,6 +3,8 @@ var Discord = require('discord.js');
 var bot = new Discord.Client();
 var Scrambo = require('scrambo');
 var threebythree = new Scrambo(); // Defaults to 3x3
+var fs = require('fs');
+var token = fs.readFileSync('token.txt', 'utf8');
 
 //Listener Event: Message Reveived
 bot.on('message', message => {
@@ -12,53 +14,53 @@ bot.on('message', message => {
   var msg = message.content.toUpperCase(); // Converts to all uppercase
   var prefix = '!' // Prefix before all commands
 
-  //TEST command
-  if (msg === prefix + 'TEST') {
-      message.channel.send('Success!') //sends message to channel where command was sent originally
+
+  //SCRAMBLEhelp command
+  if (msg === prefix + 'SCRAMBLERHELP') {
+      message.channel.send("Simply type !scramble(2/3/4/5). !scramble also works to generate a 3x3 scramble.") //sends message to channel where command was sent originally
   }
+
+  //SCRAMBLE2 command
+    if (msg === prefix + 'SCRAMBLE2') {
+      // Generate a new 2x2 scramble
+      var seeded_scramble = new Scrambo().type('222').length(10).get();
+      console.log(seeded_scramble);
+      message.channel.send(seeded_scramble); //sends message to channel where command was sent originally
+      }
+
+  //SCRAMBLE3 command
+    if (msg === prefix + 'SCRAMBLE') {
+      // Generate a new 3x3 scramble
+      var seeded_scramble = new Scrambo().type('333').length(20).get();
+      console.log(seeded_scramble);
+      message.channel.send(seeded_scramble); //sends message to channel where command was sent originally
+    }
 
   //SCRAMBLE3 command
     if (msg === prefix + 'SCRAMBLE3') {
-      // Generate a new 3x3 scramble with the seed of 1
-      var seeded_scramble = new Scrambo().type('333').get(1).length(20);
+      // Generate a new 3x3 scramble
+      var seeded_scramble = new Scrambo().type('333').length(20).get();
+      console.log(seeded_scramble);
       message.channel.send(seeded_scramble); //sends message to channel where command was sent originally
-      }
+    }
 
   //SCRAMBLE4 command
     if (msg === prefix + 'SCRAMBLE4') {
       // Generate a new 4x4 scramble with the seed of 1
-      var seeded_scramble = new Scrambo().type('444').get(1).length(25);
+      var seeded_scramble = new Scrambo().type('444').length(30).get();
+      console.log(seeded_scramble);
       message.channel.send(seeded_scramble); //sends message to channel where command was sent originally
       }
 
-  //PING command
-    if (msg === prefix + 'PING') {
-        message.channel.send('Pong!') //sends message to channel where command was sent originally
-        }
-
-  //Set game playing
-  //  if (msg === prefix + "SETGAME") {
-  //  if (msg.author.id !== "191380396586303489"){
-  //        return msg.reply(":x: Bot owner only. Sorry" + msg.author)
-  //    }
-  //    let args = msg.content.split(" ").slice(1);
-  //    let game = args.join(" ")
-  //    msg.channel.SendMessage(thingToEcho)
+  //SCRAMBLE5 command
+      if (msg === prefix + 'SCRAMBLE5') {
+      // Generate a new 5x5 scramble
+      var seeded_scramble = new Scrambo().type('555').length(35).get();
+      console.log(seeded_scramble);
+      message.channel.send(seeded_scramble); //sends message to channel where command was sent originally
+      }
 
 });
-
-//listener event: User joining the discord server
-    //bot.on('guildMemberAdd', member => {
-
-      //console.log('Welcome to US Cubers, ' + member.user.username + '! DM an @Admin or @Mod we can add it to your role!')
-
-      //Creates variable for role
-      //var role = member.guild.roles.find('name', 'Cubers-Nub');
-
-      //Actually giving the roles
-      //member.addRole(role)
-
-  //});
 
 //listener event: Bot launched
 bot.on('ready', () => {
@@ -73,4 +75,4 @@ bot.user.setActivity('with Rubik\'s cubes')
 })
 
 //login
-bot.login('NDIzNTMwMTE5ODM2MDczOTg2.DYyNww.BqARD5w-pyjSibYB6h4yJ631j-4') //shhh secret
+bot.login(token) //reads from text file
