@@ -1,11 +1,12 @@
 {
   "name": "scramblerbot",
-  "version": "1.1.2",
-  "description": "A discord bot that generates Rubik's cube scrambles with !scramble",
+  "version": "1.0.0",
+  "description": "",
   "main": "app.js",
   "dependencies": {
     "discord.js": "^11.3.2",
-    "scrambo": "^0.3.0"
+    "scrambo": "^0.3.0",
+    "fs": "^0.0.1-security"
   },
   "devDependencies": {},
   "scripts": {
@@ -13,7 +14,7 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/ecuber/ScramblerBot.git"
+    "url": "https://github.com/ecuber/ScramblerBot.git"
   },
   "keywords": [
     "scramble",
@@ -21,7 +22,7 @@
     "heroku"
   ],
   "author": "elijah",
-  "license": "MIT",
+  "license": "ISC",
   "bugs": {
     "url": "https://github.com/ecuber/ScramblerBot/issues"
   },
