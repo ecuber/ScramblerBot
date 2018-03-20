@@ -4,6 +4,7 @@
   "description": "",
   "main": "app.js",
   "dependencies": {
+    "node": "8.10.0",
     "discord.js": "^11.3.2",
     "scrambo": "^0.3.0",
     "fs": "^0.0.1-security"
@@ -26,8 +27,6 @@
   "bugs": {
     "url": "https://github.com/ecuber/ScramblerBot/issues"
   },
-  "engines": {
-    "node": "8.10.0"
-  },
+
   "homepage": "https://github.com/ecuber/ScramblerBot#readme"
 }
