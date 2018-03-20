@@ -1,5 +1,5 @@
 {
-  "name": "scramblerbot",
+  "name": "scrambler-bot-discord",
   "version": "1.0.0",
   "main": "app.js",
   "dependencies": {
