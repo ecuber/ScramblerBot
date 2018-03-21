@@ -16,7 +16,7 @@ bot.on('message', message => {
 
 
   //SCRAMBLEhelp command
-  if (msg === prefix + 'SCRAMBLERHELP') {
+  if (msg === prefix + 'SCRAMBLER HELP') {
       message.channel.send("Simply type !scramble (2//4/5/skewb/pyra/mega/sq1) or !scramble to generate a 3x3 scramble.") //sends message to channel where command was sent originally
   }
 
