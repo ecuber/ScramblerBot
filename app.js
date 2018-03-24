@@ -17,7 +17,7 @@ bot.on('message', message => {
 
   //SCRAMBLEhelp command
   if (msg === prefix + 'SCRAMBLER HELP') {
-      message.channel.send("Simply type !scramble (2//4/5/skewb/pyra/mega/sq1) or !scramble to generate a 3x3 scramble.") //sends message to channel where command was sent originally
+      message.channel.send("Simply type !scramble (2/4/5/6/7/skewb/pyra/mega/sq1) or !scramble to generate a 3x3 scramble.") //sends message to channel where command was sent originally
   }
 
         //SCRAMBLE2 command
@@ -52,7 +52,7 @@ bot.on('message', message => {
               message.channel.send(seeded_scramble); //sends scramble to channel where command was sent
     }
 
-        //SCRAMBLE5 command
+        //SCRAMBLESKEWB command
             if (msg === prefix + 'SCRAMBLE SKEWB') {
               // Generate a new 5x5 scramble
               var seeded_scramble = new Scrambo().type('skewb').get();
@@ -60,7 +60,23 @@ bot.on('message', message => {
               message.channel.send(seeded_scramble); //sends scramble to channel where command was sent
     }
 
-        //SCRAMBLESKEWB command
+      //SCRAMBLE6 command
+            if (msg === prefix + 'SCRAMBLE 6') {
+              // Generate a new 5x5 scramble
+              var seeded_scramble = new Scrambo().type('666').length(40).get();
+              console.log(seeded_scramble);
+              message.channel.send(seeded_scramble); //sends scramble to channel where command was sent
+    }
+
+      //SCRAMBLE7 command
+          if (msg === prefix + 'SCRAMBLE 7') {
+            // Generate a new 5x5 scramble
+            var seeded_scramble = new Scrambo().type('777').length(50).get();
+            console.log(seeded_scramble);
+            message.channel.send(seeded_scramble); //sends scramble to channel where command was sent
+    }
+
+        //SCRAMBLE5 command
             if (msg === prefix + 'SCRAMBLE 5') {
               // Generate a new Skewb scramble
               var seeded_scramble = new Scrambo().type('555').length(36).get();
