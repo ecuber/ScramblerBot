@@ -17,7 +17,7 @@ bot.on('message', message => {
 
   //SCRAMBLEhelp command
   if (msg === prefix + 'SCRAMBLER HELP') {
-      message.channel.send("Simply type !scramble (2/4/5/6/7/skewb/pyra/mega/sq1) or !scramble to generate a 3x3 scramble.") //sends message to channel where command was sent originally
+      message.channel.send("Simply type !scramble (2/4/5/6/7/skewb/pyra/mega/sq1/clock) or !scramble to generate a 3x3 scramble.") //sends message to channel where command was sent originally
   }
 
         //SCRAMBLE2 command
@@ -59,6 +59,13 @@ bot.on('message', message => {
               console.log(seeded_scramble);
               message.channel.send(seeded_scramble); //sends scramble to channel where command was sent
     }
+      //SCRAMBLE5 command
+          if (msg === prefix + 'SCRAMBLE 5') {
+            // Generate a new Skewb scramble
+            var seeded_scramble = new Scrambo().type('555').length(36).get();
+            console.log(seeded_scramble);
+            message.channel.send(seeded_scramble); //sends scramble to channel where command was sent
+}
 
       //SCRAMBLE6 command
             if (msg === prefix + 'SCRAMBLE 6') {
@@ -74,14 +81,6 @@ bot.on('message', message => {
             var seeded_scramble = new Scrambo().type('777').length(50).get();
             console.log(seeded_scramble);
             message.channel.send(seeded_scramble); //sends scramble to channel where command was sent
-    }
-
-        //SCRAMBLE5 command
-            if (msg === prefix + 'SCRAMBLE 5') {
-              // Generate a new Skewb scramble
-              var seeded_scramble = new Scrambo().type('555').length(36).get();
-              console.log(seeded_scramble);
-              message.channel.send(seeded_scramble); //sends scramble to channel where command was sent
     }
 
         //SCRAMBLEPYRA command
@@ -107,6 +106,15 @@ bot.on('message', message => {
               console.log(seeded_scramble);
               message.channel.send(seeded_scramble); //sends scramble to channel where command was sent
     }
+
+      //SCRAMBLECLOCK command
+          if (msg === prefix + 'SCRAMBLE CLOCK') {
+            // Generate a new clcok scramble
+            var seeded_scramble = new Scrambo().type('clock').get();
+            console.log(seeded_scramble);
+            message.channel.send(seeded_scramble); //sends scramble to channel where command was sent
+}
+
 })
 //listener event: Bot launched
 bot.on('ready', () => {
