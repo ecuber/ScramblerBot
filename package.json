@@ -18,6 +18,9 @@
     "type": "git",
     "url": "https://github.com/ecuber/ScramblerBot.git"
   },
+  "engines": {
+      "node": "8.10.0"
+    },
   "keywords": [
     "scramble",
     "discord",
