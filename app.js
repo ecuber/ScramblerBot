@@ -4,7 +4,7 @@ var bot = new Discord.Client();
 var Scrambo = require('scrambo');
 var threebythree = new Scrambo(); // Defaults to 3x3
 var fs = require('fs');
-var token = fs.readFileSync('token.txt', 'utf8');
+//var token = fs.readFileSync('token.txt', 'utf8');
 
 //Listener Event: Message Reveived
 bot.on('message', message => {
@@ -129,4 +129,4 @@ bot.user.setActivity('with Rubik\'s cubes')
 })
 
 //login
-bot.login(token) //reads from text file
+bot.login(process.env.BOT_TOKEN) //reads from text file
