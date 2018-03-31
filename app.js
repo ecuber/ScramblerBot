@@ -29,7 +29,7 @@ bot.on('message', message => {
     }
 
         //SCRAMBLE/3 command
-          if (msg === prefix + 'SCRAMBLE' || msg === prefix + 'SCRAMBLE3') {
+          if (msg === prefix + 'SCRAMBLE' || msg === prefix + 'SCRAMBLE 3') {
               // Generate a new 3x3 scramble
               var seeded_scramble = new Scrambo().type('333').get();
               console.log(seeded_scramble);
