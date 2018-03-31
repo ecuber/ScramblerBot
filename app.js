@@ -26,18 +26,10 @@ bot.on('message', message => {
               var seeded_scramble = new Scrambo().type('222').length(10).get();
               console.log(seeded_scramble);
               message.channel.send(seeded_scramble); //sends scramble to channel where command was sent
-      }
-
-        //SCRAMBLE3 command
-          if (msg === prefix + 'SCRAMBLE') {
-              // Generate a new 3x3 scramble
-              var seeded_scramble = new Scrambo().type('333').get();
-              console.log(seeded_scramble);
-              message.channel.send(seeded_scramble); //sends scramble to channel where command was sent
     }
 
-        //SCRAMBLE3 command
-          if (msg === prefix + 'SCRAMBLE 3') {
+        //SCRAMBLE/3 command
+          if (msg === prefix + 'SCRAMBLE' || msg === prefix + 'SCRAMBLE3') {
               // Generate a new 3x3 scramble
               var seeded_scramble = new Scrambo().type('333').get();
               console.log(seeded_scramble);
@@ -65,7 +57,7 @@ bot.on('message', message => {
             var seeded_scramble = new Scrambo().type('555').length(36).get();
             console.log(seeded_scramble);
             message.channel.send(seeded_scramble); //sends scramble to channel where command was sent
-}
+    }
 
       //SCRAMBLE6 command
             if (msg === prefix + 'SCRAMBLE 6') {
@@ -113,7 +105,7 @@ bot.on('message', message => {
             var seeded_scramble = new Scrambo().type('clock').get();
             console.log(seeded_scramble);
             message.channel.send(seeded_scramble); //sends scramble to channel where command was sent
-}
+    }
 
 })
 //listener event: Bot launched
