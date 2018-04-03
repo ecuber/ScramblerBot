@@ -118,7 +118,7 @@ bot.on('ready', () => {
 bot.user.setStatus('Online')
 
 //game and streaming
-bot.user.setActivity(`on ${client.guilds.size} servers! | !scramble`)
+bot.user.setActivity(`on ${bot.guilds.size} servers! | !scramble`)
 
 })
 
