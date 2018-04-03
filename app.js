@@ -107,16 +107,18 @@ bot.on('message', message => {
             message.channel.send(seeded_scramble); //sends scramble to channel where command was sent
     }
 
+
 })
+
 //listener event: Bot launched
 bot.on('ready', () => {
-  console.log('Initialization complete!') // runs when bot is launched
+  console.log('Bot ready.') // runs when bot is launched
 
 //status
 bot.user.setStatus('Online')
 
 //game and streaming
-bot.user.setActivity('with Rubik\'s cubes')
+bot.user.setActivity(`on ${client.guilds.size} servers! | !scramble`)
 
 })
 
