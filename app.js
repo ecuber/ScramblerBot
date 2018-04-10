@@ -110,10 +110,7 @@ bot.on('message', message => {
     //Server List
     if (msg === prefix + 'guilds') {
         if(message.author.id !== "191380396586303489") return;
-        message.channel.send({embed:{
-          title:"Guilds",
-          description:(guildNames),
-          color: 0x5DADE2
+        message.channel.send(guildNames)
     }
 })
 
