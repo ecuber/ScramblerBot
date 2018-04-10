@@ -115,7 +115,7 @@ bot.on('message', message => {
          message.channel.send(guildNames);
         }   
     }
-
+})
 //listener event: Bot launched
 bot.on('ready', () => {
   console.log('Bot ready.') // runs when bot is launched
@@ -131,4 +131,3 @@ bot.user.setActivity(`on ${bot.guilds.size} servers! | !scramble`)
 
 //login
 bot.login(process.env.BOT_TOKEN) //reads from text file 
-})
