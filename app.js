@@ -13,7 +13,6 @@ bot.on('message', message => {
   var sender = message.author; // The person who sent the Message
   var msg = message.content.toUpperCase(); // Converts to all uppercase
   var prefix = '!' // Prefix before all commands
-  const guildNames = bot.guilds.map(g => g.name).join("\n");
 
   //SCRAMBLEhelp command
   if (msg === prefix + 'SCRAMBLER HELP') {
@@ -109,7 +108,8 @@ bot.on('message', message => {
 
     //Server List
     if (message.content.startsWith(prefix + 'guilds')) {
-    if (message.author.id !== '191380396586303489') return; 
+    if (message.author.id !== '191380396586303489') return;
+    var guildNames = bot.guilds.map(g => g.name).join("\n"); 
          console.log(guildNames);
          message.channel.send(guildNames);
         }   
