@@ -108,11 +108,13 @@ bot.on('message', message => {
     }
 
     //Server List
+    if (message.content.startsWith(prefix + 'commandname')) {
+        if (message.author.id !== '191380396586303489') return; 
     if (msg === prefix + 'guilds') {
-        if(message.author.id !== "191380396586303489") return;
-        message.channel.send(guildNames)
+         console.log(guildNames);
+         message.channel.send(guildNames);
     }
-})
+}
 
 //listener event: Bot launched
 bot.on('ready', () => {
