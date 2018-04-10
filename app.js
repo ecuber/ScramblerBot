@@ -128,5 +128,7 @@ bot.user.setActivity(`on ${bot.guilds.size} servers! | !scramble`)
 
 })
 
+
 //login
-bot.login(process.env.BOT_TOKEN) //reads from text file
+bot.login(process.env.BOT_TOKEN) //reads from text file 
+})
