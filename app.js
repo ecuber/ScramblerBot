@@ -109,7 +109,7 @@ bot.on('message', message => {
     //Server List
     if (message.content.startsWith(prefix + 'guilds')) {
     if (message.author.id !== '191380396586303489') return;
-    var guildNames = bot.guilds.map(g => g.name).join("\n"); 
+    var guildNames = bot.guilds.map(g => g.name).join("\n-"); 
          console.log(guildNames);
          message.channel.send(guildNames);
         }   
